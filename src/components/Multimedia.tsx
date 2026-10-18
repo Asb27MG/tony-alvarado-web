@@ -1,6 +1,7 @@
 import { siteData } from '../data/site'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
+import { SocialIcon } from './SocialIcon'
 
 export function Multimedia() {
   return (
@@ -23,8 +24,8 @@ export function Multimedia() {
                 ))}
               </div>
               <div className="mt-5 flex flex-wrap gap-3">
-                <a href="https://open.spotify.com/search/Tony%20Alvarado" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-gold bg-gold px-4 py-2.5 text-[9px] font-semibold uppercase tracking-[0.06em] text-ink transition hover:bg-transparent">♫ Spotify ↗</a>
-                <a href="https://music.apple.com/us/search?term=Tony%20Alvarado" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-gold px-4 py-2.5 text-[9px] font-semibold uppercase tracking-[0.06em] text-gold-dark transition hover:bg-gold hover:text-ink">Apple Music ↗</a>
+                <a href={siteData.music.spotify} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-gold bg-gold px-4 py-2.5 text-[9px] font-semibold uppercase tracking-[0.06em] text-ink transition hover:bg-transparent"><SocialIcon name="spotify" className="h-4 w-4" /> Spotify ↗</a>
+                <a href="https://music.apple.com/us/search?term=Tony%20Alvarado" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-gold px-4 py-2.5 text-[9px] font-semibold uppercase tracking-[0.06em] text-gold-dark transition hover:bg-gold hover:text-ink"><SocialIcon name="apple" className="h-4 w-4" /> Apple Music ↗</a>
               </div>
             </div>
           </article>

@@ -1,6 +1,7 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
 import { siteData } from '../data/site'
 import { Reveal } from './Reveal'
+import { SocialIcon } from './SocialIcon'
 
 export function Contact() {
   const [status, setStatus] = useState('')
@@ -49,6 +50,34 @@ export function Contact() {
           <div className="grid grid-cols-[42px_1fr] items-center gap-3">
             <span className="grid h-10 w-10 place-items-center rounded-full bg-[#f4e9c9] text-gold-dark">⌖</span>
             <p className="m-0"><b className="block font-serif text-lg font-medium text-ink">Base artística</b><small className="block text-[10px] text-muted">{siteData.contact.location}</small></p>
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-line pt-7">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.19em] text-gold-dark">Redes sociales y música</p>
+          <h3 className="mt-2 font-serif text-2xl font-medium text-ink">Seguime y escuchá mi música</h3>
+          <p className="mt-2 text-xs leading-6 text-muted">Encontrá mis novedades, videos y producciones en estas plataformas.</p>
+          <div className="mt-5 grid grid-cols-1 gap-3 min-[430px]:grid-cols-2">
+            {siteData.socials.filter((social) => social.featured).map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Abrir ${social.label} de Tony Alvarado en una nueva pestaña`}
+                title={`${social.label} · ${social.handle}`}
+                className="group flex min-w-0 items-center gap-3 border border-[#e5dccb] bg-warm p-3 transition-colors hover:border-gold hover:bg-[#f4ebd6] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
+              >
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#f2e7ca] transition-colors group-hover:bg-[#e9d4a0]">
+                  <SocialIcon name={social.icon} className="h-5 w-5 object-contain" />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-xs font-semibold text-ink">{social.label}</span>
+                  <span className="mt-0.5 block truncate text-[9px] text-muted">{social.handle}</span>
+                </span>
+                <span className="shrink-0 text-xs text-gold-dark" aria-hidden="true">↗</span>
+              </a>
+            ))}
           </div>
         </div>
       </Reveal>

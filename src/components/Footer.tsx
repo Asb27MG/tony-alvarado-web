@@ -1,4 +1,5 @@
 import { siteData } from '../data/site'
+import { SocialIcon } from './SocialIcon'
 
 export function Footer() {
   return (
@@ -9,7 +10,17 @@ export function Footer() {
       </div>
 
       <FooterColumn title="Secciones" links={[["Presentación", "#inicio"], ["Mi historia", "#biografia"], ["Repertorio", "#repertorio"], ["Eventos", "#conciertos"], ["Reconocimientos", "#reconocimientos"]]} />
-      <FooterColumn title="Escúchame y acompáñame" links={siteData.socials.map((item) => [item.label, item.href])} />
+      <div>
+        <h3 className="mb-4 text-[9px] font-semibold uppercase tracking-[0.1em] text-gold-dark">Escúchame y acompáñame</h3>
+        <div className="grid grid-cols-2 gap-x-3 gap-y-3 sm:grid-cols-1">
+          {siteData.socials.map((social) => (
+            <a key={`${social.label}-${social.href}`} href={social.href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 text-[10px] leading-5 text-muted transition hover:text-gold-dark" aria-label={`Visitar ${social.label} de Tony Alvarado`}>
+              <SocialIcon name={social.icon} className="h-4 w-4 shrink-0 object-contain" />
+              <span>{social.label} <span aria-hidden="true">↗</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
 
       <div>
         <h3 className="mb-4 text-[9px] font-semibold uppercase tracking-[0.1em] text-gold-dark">Hablemos de tu evento</h3>

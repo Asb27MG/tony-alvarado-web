@@ -3,6 +3,7 @@ import { HeroMusic } from './HeroMusic'
 import { CircularSoundVisualizer } from './CircularSoundVisualizer'
 import { Reveal } from './Reveal'
 import { siteData } from '../data/site'
+import { SocialIcon } from './SocialIcon'
 
 export function Hero() {
   const heroRef = useRef<HTMLElement | null>(null)
@@ -50,8 +51,8 @@ export function Hero() {
           {siteData.artist.shortDescription}
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-          <a href="https://open.spotify.com/search/Tony%20Alvarado" target="_blank" rel="noopener noreferrer" className="inline-flex min-w-48 items-center justify-center gap-2 border border-gold bg-gold px-5 py-3.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-ink transition-colors duration-200 hover:border-[#dfba54] hover:bg-[#dfba54] hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark">
-            <span className="text-sm">♫</span> Escuchar mi música ↗
+          <a href={siteData.music.spotify} target="_blank" rel="noopener noreferrer" className="inline-flex min-w-48 items-center justify-center gap-2 border border-gold bg-gold px-5 py-3.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-ink transition-colors duration-200 hover:border-[#dfba54] hover:bg-[#dfba54] hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark">
+            <SocialIcon name="spotify" className="h-4 w-4" /> Escuchar mi música ↗
           </a>
           <a href="#contacto" className="inline-flex items-center justify-center border border-gold px-5 py-3.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-gold-dark transition hover:bg-gold hover:text-ink">
             Consultar contratación
@@ -67,7 +68,7 @@ export function Hero() {
           <CircularSoundVisualizer playing={musicPlaying} />
           <div className="pointer-events-none absolute inset-[8.8%] rounded-full bg-gold/10 blur-2xl" />
           <div ref={photoRef} className="pointer-events-none absolute inset-[9.2%] overflow-hidden rounded-full border-[5px] border-gold bg-white shadow-[0_28px_90px_rgba(67,49,18,0.16)] transition-transform duration-500 ease-out">
-            <img src="/assets/images/arpa-teatro.webp" alt="Arpa de concierto sobre un escenario" className="h-full w-full object-cover" />
+            <img src="/assets/images/Tony_Alvarado_Hero_Arpa_Azul.webp" alt="Tony Alvarado junto a su arpa azul en estudio" className="h-full w-full object-cover object-[52%_35%]" />
           </div>
           <HeroMusic heroRef={heroRef} onPlaybackChange={setMusicPlaying} />
         </div>

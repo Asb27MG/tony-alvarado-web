@@ -15,12 +15,12 @@ const gallery: GalleryItem[] = [
     src: '/assets/images/Tony_Alvarado_Arpa_Sentado.webp',
     alt: 'Tony Alvarado sentado interpretando el arpa en un escenario',
     className: 'md:row-span-2',
-    objectPosition: 'center 38%',
+    objectPosition: '48% 18%',
   },
   {
     src: '/assets/images/Tony_Alvarado_Concierto_Arpa_Azul.webp',
     alt: 'Tony Alvarado tocando un arpa azul durante un concierto',
-    objectPosition: 'center 31%',
+    objectPosition: '38% 14%',
   },
   {
     src: '/assets/images/Tony_Alvarado_Retrato_Arpa.webp',
@@ -35,7 +35,7 @@ const gallery: GalleryItem[] = [
   {
     src: '/assets/images/Tony_Alvarado_Arpa_Estudio.webp',
     alt: 'Tony Alvarado tocando el arpa en una sesión fotográfica',
-    objectPosition: 'center 32%',
+    objectPosition: '48% 16%',
   },
   {
     src: '/assets/images/Tony_Alvarado_Arpa_En_Vivo.webp',
@@ -46,6 +46,12 @@ const gallery: GalleryItem[] = [
     src: '/assets/images/Tony_Alvarado_Retrato_Sonrisa.webp',
     alt: 'Tony Alvarado sonriendo en un retrato',
     objectPosition: 'center 25%',
+  },
+  {
+    src: '/assets/images/Tony_Alvarado_Boda_Exterior.webp',
+    alt: 'Tony Alvarado interpretando el arpa en una ceremonia al aire libre',
+    className: 'sm:col-span-2 md:col-span-1',
+    objectPosition: '46% 58%',
   },
 ]
 

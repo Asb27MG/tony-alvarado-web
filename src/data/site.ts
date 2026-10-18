@@ -23,6 +23,8 @@ export type StoryChapter = {
   paragraphs: string[]
 }
 
+const SPOTIFY_ARTIST_URL = 'https://open.spotify.com/artist/6dCX1IS1llSgy0NCcU7qRo'
+
 export const siteData = {
   artist: {
     name: 'Tony Alvarado',
@@ -160,13 +162,16 @@ export const siteData = {
     whatsapp: '13058429912',
     location: 'Miami, Estados Unidos',
   },
+  music: { spotify: SPOTIFY_ARTIST_URL },
   socials: [
-    { label: 'Instagram · Tony', href: 'https://www.instagram.com/tonyalvaradoochoa/' },
-    { label: 'Instagram · Venezuela Nueva Music', href: 'https://www.instagram.com/venezuelanuevamusic/' },
-    { label: 'TikTok', href: 'https://www.tiktok.com/@tonyalvaradoochoa' },
-    { label: 'YouTube', href: 'https://www.youtube.com/@tonyalvaradoochoa187' },
-    { label: 'Spotify', href: 'https://open.spotify.com/search/Tony%20Alvarado' },
-    { label: 'Apple Music', href: 'https://music.apple.com/us/search?term=Tony%20Alvarado' },
-    { label: 'Amazon Music', href: 'https://music.amazon.com/search/Tony%20Alvarado' },
+    { label: 'Instagram', handle: '@tonyalvaradoochoa', icon: 'instagram', href: 'https://instagram.com/tonyalvaradoochoa', featured: true },
+    { label: 'YouTube', handle: '@tonyalvaradoochoa187', icon: 'youtube', href: 'https://youtube.com/@tonyalvaradoochoa187', featured: true },
+    { label: 'Threads', handle: '@tonyalvaradoochoa', icon: 'threads', href: 'https://www.threads.com/@tonyalvaradoochoa', featured: true },
+    { label: 'TikTok', handle: '@tonyalvaradoochoa', icon: 'tiktok', href: 'https://www.tiktok.com/@tonyalvaradoochoa', featured: true },
+    { label: 'Spotify', handle: 'Tony Alvarado', icon: 'spotify', href: SPOTIFY_ARTIST_URL, featured: true },
+    { label: 'Link.me', handle: 'Todos mis enlaces', icon: 'linkme', href: 'https://link.me/tonyalvaradoochoa', featured: true },
+    { label: 'Instagram · Venezuela Nueva Music', handle: '@venezuelanuevamusic', icon: 'instagram', href: 'https://www.instagram.com/venezuelanuevamusic/', featured: false },
+    { label: 'Apple Music', handle: 'Tony Alvarado', icon: 'apple', href: 'https://music.apple.com/us/search?term=Tony%20Alvarado', featured: false },
+    { label: 'Amazon Music', handle: 'Tony Alvarado', icon: 'amazon', href: 'https://music.amazon.com/search/Tony%20Alvarado', featured: false },
   ],
 }
