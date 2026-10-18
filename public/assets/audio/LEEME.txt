@@ -1,0 +1,5 @@
+Coloca aquí la canción de arpa que quieras usar en la portada y nómbrala:
+
+tema-arpa.mp3
+
+El sitio ya está programado para reproducirla al pulsar “Entrar con música” y hacer un fade-out al bajar de la portada.

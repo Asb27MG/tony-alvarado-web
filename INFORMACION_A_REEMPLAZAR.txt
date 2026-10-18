@@ -1,0 +1,17 @@
+SITIO ARPA — DATOS INTEGRADOS (18 DE OCTUBRE DE 2026)
+
+La biografía, trayectoria, discografía, reconocimientos, redes sociales y
+contacto se adaptaron a partir del texto enviado por el artista.
+
+PARA FINALIZAR ANTES DE PUBLICAR:
+- Confirmar que las fotografías originales de la plantilla son las correctas.
+- Reemplazar búsquedas genéricas de Spotify/Apple/Amazon por enlaces a
+  los perfiles oficiales, si el artista los facilita.
+- Confirmar el prefijo +1 del WhatsApp 305-842-9912.
+- Añadir enlaces concretos a videos o audios oficiales cuando estén disponibles.
+- Incorporar fechas de conciertos solamente cuando el artista las confirme.
+
+El formulario actual prepara un mensaje de WhatsApp; no hay backend de correo.
+La carpeta de referencia Figma se ha mantenido intacta.
+
+Contenido editable: src/data/site.ts.
